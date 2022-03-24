@@ -1,4 +1,4 @@
-#include "/opt/homebrew/Cellar/igraph/0.9.7/include/igraph/igraph.h"
+#include "/opt/homebrew/Cellar/igraph/0.9.7/include/igraph/igraph.h" // your path to the folder with igraph
 #include <iostream>
 
 
