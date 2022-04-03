@@ -1,0 +1,28 @@
+# site: https://sagecell.sagemath.org
+h=Graph({"RUS":["POL", "LIT", "EST", "LAT", "BEL", "UKR", "GEO"],
+         "LAT":["EST", "BEL", "LIT"],
+         "POL":["LIT", "BEL", "SLOVA", "CHE", "GER", "UKR"],
+         "GER":["AUS", "LUX", "BELG", "NET", "FRA", "SWI", "CHE"],
+         "HUN":["CRO", "ROM", "SLOVE", "UKR", "SLOVA", "AUS", "SER"],
+         "AUS":["SLOVA", "LIE", "SWI", "ITA", "SLOVE", "CHE"],
+         "KOS":["SER", "MAC", "ALB", "MON"], 
+         "SER":["BOS", "CRO", "ROM", "BUL"],
+         "BELG":["FRA", "LUX", "NET"],
+         "TUR":["ARM", "GRE", "BUL", "GEO"],
+         "MON":["ALB", "SER", "BOS", "CRO"],
+         "ROM":["MOL", "UKR", "BUL"],
+         "GRE":["ALB", "MAC", "BUL"],
+         "FRA":["LUX", "ITA", "SWI"],
+         "UKR":["SLOVA", "MOL", "BEL"],
+         "MAC":["ALB", "SER", "BUL"],
+         "SWI":["LIE", "ITA"],
+         "SLOVE":["CRO", "ITA"],
+         "LIT":["BEL"],
+         "GEO":["ARM"],
+         "BOS":["CRO"],
+         "CHE":["SLOVA"]})
+h = h.to_undirected()
+h.plot().show()
+tree = h.spqr_tree()
+p = tree.plot(vertex_size=650)
+p.show()
